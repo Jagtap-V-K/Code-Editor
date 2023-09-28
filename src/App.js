@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import CodeEditor from './CodeEditor';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div class="mainarea">
+        <div class="editors">
+            <h2>html</h2>
+            <textarea id="html" placeholder="HTML"></textarea>
+        </div>
+        <div class="editors">
+            <h2>css</h2>
+            <textarea id="css" placeholder="CSS"></textarea>
+        </div>
+        <div class="editors">
+            <h2>js</h2>
+            <textarea id="js" placeholder="JavaScript"></textarea>
+        </div>
+    </div>
+    <div class="output">
+        <h2>output</h2>
+        <iframe id="code"></iframe>
+    </div>
+    <script type="text/javaScript" src="app.js"></script>
     </div>
   );
 }
